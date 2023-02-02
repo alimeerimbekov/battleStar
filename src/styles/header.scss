@@ -1,3 +1,138 @@
 .header {
   background: #101011;
+  padding: 24px 20px 24px 120px;
+
+  &__logo {
+    z-index: 10;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    width: 50%;
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+  }
+
+  &__arrow {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__arr {
+    cursor: pointer;
+  }
+
+  &__csgo {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    &-img {
+      width: 100%;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    &-arrow {
+      cursor: pointer;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__search {
+    padding: 10px 0 10px 42px ;
+    background: #1D1D21;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 18px;
+    &-icon {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+    }
+  }
+
+  &__balance {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      color: #787878;
+      display: flex;
+      column-gap: 5px;
+
+      span {
+        color: #787878 !important;
+        cursor: pointer;
+      }
+    }
+
+    &-num {
+      font-weight: 500;
+      font-size: 18px;
+      color: #FAC704;
+    }
+  }
+  &__sms, &__notification {
+    background: #242424;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    &-count {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FAC704;
+      color: #101011;
+      top: -13px;
+      right: -13px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__user {
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    &-name {
+      cursor: pointer;
+    }
+  }
 }

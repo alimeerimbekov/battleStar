@@ -17,4 +17,12 @@
   padding: 0 20px;
 }
 
+.main {
+  background: linear-gradient(360deg, #040101 50%, #212021 50%);
+}
+
 @import "header";
+@import "aside";
+@import "home";
+@import "adver";
+@import "gamer";
