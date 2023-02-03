@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 
 const Aside = () => {
     const [active,setActive] = useState(1)
@@ -20,7 +21,8 @@ const Aside = () => {
     d="M0.281738 67.647V62.541H5.41332L6.19332 63.3041V67.647H0.281738ZM4.32132 65.8043H2.05521V66.2751H4.44448V63.9129H2.047V64.4081H4.32132V65.8043ZM6.73631 63.3771V67.647H8.49337V65.8043H10.7595V64.4162H8.49337V63.9129H10.8826V67.647H12.6397V63.3771L11.794 62.541H7.582L6.73631 63.3771ZM13.1829 63.3365L14.0367 62.541H19.1109V63.9129H17.05V67.647H15.293V63.9129H13.1829V63.3365ZM19.6535 63.3365L20.5073 62.541H25.5814V63.9129H23.5205V67.647H21.7636V63.9129H19.6535V63.3365ZM26.1239 62.541H27.8892V66.2751H31.8713V67.647H26.9778L26.1239 66.8515V62.541ZM32.4102 66.8271L33.2395 67.647H38.3382V66.2751H34.1755V65.78H36.4334V64.4H34.1755V63.9129H38.3382V62.541H33.2641L32.4102 63.3365V66.8271ZM38.8808 65.8043V63.369L39.7265 62.541H44.8088V63.9129H40.6379V64.4H42.9204V65.8043H38.8808ZM44.8088 66.8271L43.9796 67.647H38.8808V66.2751H43.0436V64.4H44.8088V66.8271ZM45.3514 63.3365L46.2053 62.541H51.2794V63.9129H49.2186V67.647H47.4615V63.9129H45.3514V63.3365ZM51.822 63.3771V67.647H53.579V65.8043H55.8451V64.4162H53.579V63.9129H55.9683V67.647H57.7253V63.3771L56.8797 62.541H52.6677L51.822 63.3771ZM58.2686 62.541V67.647H60.0257V65.8043H62.3V64.4081H60.0339V63.9129H62.4231V65.715L63.1785 67.647H64.9438L64.1802 65.6176V63.3041L63.4002 62.541H58.2686Z"/>
 </svg>
                     </span>
-                <div onClick={() => setActive(1)} className={`aside__link ${active === 1 ? "active" : ""}`}>
+                <Link to={"/"}>
+                    <div onClick={() => setActive(1)} className={`aside__link ${active === 1 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="30" height="28" viewBox="0 0 30 28" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -28,9 +30,12 @@ const Aside = () => {
     d="M27 3.5V24.5H3V3.5H27ZM27 0.5H3C1.335 0.5 0 1.835 0 3.5V24.5C0 26.165 1.335 27.5 3 27.5H27C28.665 27.5 30 26.165 30 24.5V3.5C30 1.835 28.665 0.5 27 0.5ZM24 18.5H6V21.5H24V18.5ZM12 6.5H6V15.5H12V6.5ZM15 9.5H24V6.5H15V9.5ZM24 12.5H15V15.5H24V12.5Z"/>
 </svg>
                     </span>
-                    <p className="aside__title">ГЛАВНАЯ</p>
-                </div>
-                <div onClick={() => setActive(2)} className={`aside__link ${active === 2 ? "active" : ""}`}>
+                        <p className="aside__title">ГЛАВНАЯ</p>
+                    </div>
+                </Link>
+
+                <Link to={"/streams"}>
+                    <div onClick={() => setActive(2)} className={`aside__link ${active === 2 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="30" height="21" viewBox="0 0 30 21" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -39,9 +44,9 @@ const Aside = () => {
 </svg>
 
                     </span>
-                    <p className="aside__title">МАТЧИ</p>
-                </div>
-                <div onClick={() => setActive(3)} className={`aside__link ${active === 3 ? "active" : ""}`}>
+                        <p className="aside__title">МАТЧИ</p>
+                    </div>
+                    <div onClick={() => setActive(3)} className={`aside__link ${active === 3 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -50,9 +55,12 @@ const Aside = () => {
 </svg>
 
                     </span>
-                    <p className="aside__title">ТУРНИРЫ</p>
-                </div>
-                <div onClick={() => setActive(5)} className={`aside__link ${active === 5 ? "active" : ""}`}>
+                        <p className="aside__title">ТУРНИРЫ</p>
+                    </div>
+                </Link>
+
+                <Link to={'/streams'}>
+                    <div onClick={() => setActive(5)} className={`aside__link ${active === 5 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -66,9 +74,9 @@ const Aside = () => {
 </svg>
 
                     </span>
-                    <p className="aside__title">КОМАНДЫ</p>
-                </div>
-                <div onClick={() => setActive(6)} className={`aside__link ${active === 6 ? "active" : ""}`}>
+                        <p className="aside__title">КОМАНДЫ</p>
+                    </div>
+                    <div onClick={() => setActive(6)} className={`aside__link ${active === 6 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -76,9 +84,11 @@ const Aside = () => {
     d="M12 12C15.315 12 18 9.315 18 6C18 2.685 15.315 0 12 0C8.685 0 6 2.685 6 6C6 9.315 8.685 12 12 12ZM12 15C7.995 15 0 17.01 0 21V22.5C0 23.325 0.675 24 1.5 24H22.5C23.325 24 24 23.325 24 22.5V21C24 17.01 16.005 15 12 15Z"/>
 </svg>
                     </span>
-                    <p className="aside__title">ДРУЗЬЯ</p>
-                    <span className="aside__link-count">3</span>
-                </div>
+                        <p className="aside__title">ДРУЗЬЯ</p>
+                        <span className="aside__link-count">3</span>
+                    </div>
+                </Link>
+
             </div>
         </div>);
 };

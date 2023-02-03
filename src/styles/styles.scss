@@ -20,7 +20,13 @@
 .main {
   background: linear-gradient(360deg, #040101 50%, #212021 50%);
 }
-
+.layout{
+  display: flex;
+  flex-direction: column;
+}
+@import "filter";
+@import "streams";
+@import "filt";
 @import "header";
 @import "aside";
 @import "home";

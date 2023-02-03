@@ -1,0 +1,17 @@
+.filter{
+    padding: 10px 0 ;
+    height: 100vh;
+    background: #040101;
+    width: 21%;
+    position: sticky;
+    top: 0;
+    left: 95px;
+    &__title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #F8F8F8;
+        margin: 24px 0  8px 20px;
+    }
+}
