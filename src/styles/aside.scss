@@ -16,7 +16,24 @@
     position: relative;
     margin-top: 20px;
     cursor: pointer;
+    transition: .5s;
+    &:hover{
+      transition: .5s;
+      background: #FAC704;
+      .aside__icon {
+        svg {
+          fill: #101011;
+        }
+      }
+      .aside__title {
+        color: #101011;
+      }
 
+      .aside__link-count {
+        background: black;
+        color: #F8F8F8;
+      }
+    }
     &-count {
       width: 25px;
       height: 25px;
