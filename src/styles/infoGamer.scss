@@ -1,0 +1,62 @@
+.infoGamer {
+  padding-bottom: 229px;
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
+  }
+
+  &__card {
+    display: flex;
+    margin-left: 150px;
+    background: #23252C;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 1000px;
+
+    &-left {
+      width: 40%;
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 350px;
+      height: 100%;
+      border-radius: 18px 0 0 18px;
+    }
+
+    &-right {
+      width: 60%;
+      padding: 44px 37px 44px 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      font-weight: 900;
+      font-size: 34px;
+    }
+
+    &-surname {
+      font-weight: 500;
+      font-size: 22px;
+      color: #606060;
+      margin: 10px 0;
+    }
+
+    &-team {
+      font-weight: 500;
+      font-size: 22px;
+    }
+
+    &-desc {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: #BFBFBF;
+      margin: 50px 0 83px;
+    }
+  }
+}

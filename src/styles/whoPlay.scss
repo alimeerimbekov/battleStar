@@ -1,0 +1,61 @@
+.whoPlay {
+  padding-bottom: 276px;
+
+  &__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 180px;
+  }
+
+  &__queue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 85%;
+      height: 3px;
+      top: 35px;
+      right: 100px;
+      z-index: 1;
+      background: linear-gradient(90deg, #FAC704 -1.63%, #FF7A00 101.63%);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    z-index: 2;
+  }
+
+  &__num {
+    font-weight: 500;
+    font-size: 36px;
+    color: #8A0074;
+    background: #FAC704;
+    border-radius: 50%;
+    border: none;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -10px 2em olive;
+  }
+
+  &__answer {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+}

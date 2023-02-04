@@ -1,6 +1,9 @@
 import React from 'react';
-
+import {useLocation} from 'react-router-dom'
 const Sales = () => {
+
+    const location = useLocation()
+
     return (
         <section className='sales'>
             <div className="container">
@@ -12,7 +15,9 @@ const Sales = () => {
                             +200 BS в качестве бонуса
                         </h3>
                         <button className="adver__btn sales__btn">
-                            Перейти в кошелёк
+                            {
+                                location.pathname === ('/lendin') ? 'Создать аккаунт' : 'Перейти в кошелек'
+                            }
                         </button>
                     </div>
                     <span className='sales__icon'>
