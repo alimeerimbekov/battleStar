@@ -13,15 +13,29 @@ const GamerTop = () => {
 
             <p className="gamerTop__text">Топ игроков месяца</p>
 
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
-            <GamerUser/>
+          <div className="gamerTop__overflow">
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+              <GamerUser/>
+          </div>
         </div>
     );
 };

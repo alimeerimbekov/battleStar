@@ -8,13 +8,20 @@
 }
 
 .gamerTop {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   padding: 22px 24px 21px 53px;
   background: rgba(248, 248, 248, 0.05);
 
+  &__overflow{
+    overflow-y: scroll;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+  }
 
   &__top {
     display: flex;

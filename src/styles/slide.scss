@@ -1,0 +1,82 @@
+.slide {
+  margin: 118px 0 165px;
+
+  &__card {
+    display: flex;
+  }
+
+  &__img {
+    width: 70%;
+  }
+
+  &__info {
+    width: 30%;
+    background: #242426;
+    padding: 35px 48px 17px 34px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 16px;
+    color: #BFBFBF;
+    margin: 15px 0 36px;
+  }
+
+  &__teamReg {
+    font-weight: 500;
+    font-size: 16px;
+    color: #BFBFBF;
+    margin-bottom: 13px;
+  }
+
+  &__teams {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    height: 190px;
+    overflow-y: scroll;
+  }
+
+  &__team {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+    &-logo {
+      width: 100%;
+      max-width: 42px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &-ball {
+      font-weight: 500;
+      font-size: 16px;
+      color: #FAC704;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  &__btn {
+    background: #FAC704;
+    border-radius: 4px;
+    border: none;
+    padding: 12px 77px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #18181B;
+  }
+}
