@@ -6,6 +6,7 @@ import {IoIosSearch, IoIosNotifications} from 'react-icons/io'
 import {MdMessage} from 'react-icons/md'
 import CsGo from '../../assets/csgo.png'
 import Aside from "../../components/Aside/Aside";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -22,6 +23,7 @@ const Header = () => {
                         <p className="header__csgo-name">CS:GO</p>
                         <span className="header__csgo-arrow"><TbChevronDown size={25}/></span>
                     </div>
+                    <Link to={'/support'}>Поддержка</Link>
                 </div>
                 <div className="header__right">
                     <label className='header__label'>
