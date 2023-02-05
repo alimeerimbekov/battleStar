@@ -1,0 +1,65 @@
+.star {
+
+  &__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 48px;
+  }
+
+  &__desc{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin: 19px 0 61px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__card {
+    background: rgba(248, 248, 248, 0.05);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px 5px 10px;
+
+    &-logo {
+      width: 100%;
+      height: 100%;
+      max-width: 108px;
+      max-height: 80px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 22px;
+    }
+
+    &-stat {
+      &-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #606060;
+      }
+
+      &-num {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    &-pris {
+      display: flex;
+      column-gap: 15px;
+    }
+
+  }
+
+
+}

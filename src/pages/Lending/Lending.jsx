@@ -8,6 +8,8 @@ import ProfGamer from "./ProfGamer/ProfGamer";
 import InfoGamer from "../../components/InfoGamer/InfoGamer";
 import BtnReg from "./BtnReg/BtnReg";
 import Stat from "./Stat/Stat";
+import Star from "./Star/Star";
+import Footer from "./Footer/Footer";
 
 const Lending = () => {
     return (
@@ -27,7 +29,8 @@ const Lending = () => {
             </main>
             <Stat/>
             <main className='lending'>
-
+                <Star/>
+                <Footer/>
             </main>
         </>
 
