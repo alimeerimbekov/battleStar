@@ -1,0 +1,36 @@
+.sales {
+  padding-bottom: 167px;
+
+  &__block {
+    background: linear-gradient(262.36deg, #7D70D1 0%, #134B48 100%);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 127px 39px 126px;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin: 26px 0 40px;
+  }
+
+  &__btn {
+    width: 50%;
+  }
+
+}

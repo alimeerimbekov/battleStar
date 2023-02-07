@@ -1,0 +1,44 @@
+.csgo {
+  padding: 293px 0 381px;
+
+  &__hover {
+    position: relative;
+
+    &-img {
+      width: 100%;
+      position: relative;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(31, 31, 36, 0) 19.27%, #000000 100%);
+      border: 5px solid #FAC704;
+      box-shadow: 0 4px 36px rgba(250, 199, 4, 0.24);
+    }
+
+    &-effect {
+      position: absolute;
+      bottom: 50px;
+      right: 50%;
+      transform: translateX(50%);
+      font-weight: 500;
+      font-size: 18px;
+      color: #FAC704;
+      cursor: pointer;
+    }
+  }
+
+
+  &__name {
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+    margin-top: 42px;
+    color: #F8F8F8;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

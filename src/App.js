@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
 import './styles/styles.scss'
 import Streams from "./pages/Streams/Streams";
+import Lending from "./pages/Lending/Lending";
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
         <Route path={''} element={<Layout/>}>
           <Route path={'/'} element={<Home/>}/>
           <Route path={'/streams'} element={<Streams/>}/>
-
         </Route>
+        <Route path={'/lending'} element={<Lending/>}/>
         <Route path={'/register'} element={<Register/>} />
         <Route path={'/login'} element={<Login/>} />
       </Routes>
