@@ -1,9 +1,10 @@
 import React from 'react';
 import img from "../../assets/stream__card.png"
 import flag from "../../assets/flag-rs.png"
+import {Link} from "react-router-dom";
 const StreamCard = () => {
     return (
-        <div className="stream__card">
+        <Link to={'/streamView'} className="stream__card">
             <img className="stream__card-img" src={img} alt=""/>
             <div className="stream__card-info">
                 <div className="stream__card-info-row">
@@ -36,7 +37,7 @@ const StreamCard = () => {
 
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
