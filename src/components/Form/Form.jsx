@@ -8,6 +8,10 @@ const Form = ({close, setClose}) => {
 
     const [active, setActive] = useState(1)
 
+    const changeRegister = () => {
+        setActive(2)
+    }
+
 
     return (
         <form className="form">
