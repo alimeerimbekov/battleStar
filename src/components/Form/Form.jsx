@@ -4,18 +4,29 @@ import {ImAppleinc} from 'react-icons/im'
 import {BsGoogle} from 'react-icons/bs'
 import {GrFacebookOption} from 'react-icons/gr'
 
-const Form = ({close, setClose}) => {
+const Form = ({close, setClose, reg, setReg}) => {
 
     const [active, setActive] = useState(1)
 
-    const changeRegister = () => {
-        setActive(2)
+    const regTrue = () => {
+        if (reg === true){
+            setActive(2)
+        }
     }
+    setTimeout(regTrue, 1)
 
+    const regFalse = () => {
+        if (reg === false){
+            setActive(1)
+        }
+    }
+    setTimeout(regFalse, 1)
+
+    console.log(reg)
 
     return (
         <form className="form">
-                <span className='form__close' onClick={() => setClose(!close)}>
+                <span className='form__close' onClick={() => setClose(false)}>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
       fill="#F8F8F8"/>
@@ -53,10 +64,10 @@ const Form = ({close, setClose}) => {
 
                 </span>
             <div className="form__top">
-                <div className={`form__border ${active === 1 ? 'active' : ''}`} onClick={() => setActive(1)}>
+                <div className={`form__border ${active === 1 ? 'active' : ''}`} onClick={() => regFalse()}>
                     <h2 className={`form__title ${active === 1 ? 'active' : ''}`}>ВОЙТИ</h2>
                 </div>
-                <div className={`form__border ${active === 2 ? 'active' : ''}`} onClick={() => setActive(2)}>
+                <div className={`form__border ${active === 2 ? 'active' : ''}`} onClick={() => regTrue()}>
                     <h2 className={`form__title ${active === 2 ? 'active' : ''}`}>СОЗДАТЬ АККАУНТ</h2>
                 </div>
             </div>
