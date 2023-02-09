@@ -6,7 +6,6 @@ import Accordion from "../../components/Accordion/Accordion";
 const Support = () => {
 
 
-
     return (
         <section className='support'>
             <div className="container">

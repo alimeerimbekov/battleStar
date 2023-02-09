@@ -7,16 +7,20 @@ import {MdMessage} from 'react-icons/md'
 import CsGo from '../../assets/csgo.png'
 import Aside from "../../components/Aside/Aside";
 import {Link} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
 const Header = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className='header'>
             <Aside/>
             <nav className="header__nav">
                 <div className="header__left">
                     <div className="header__arrow">
-                        <span className='header__arr'><HiArrowLeft size={30}/></span>
-                        <span className='header__arr'><HiArrowRight size={30}/></span>
+                        <span className='header__arr' onClick={() => navigate(-1)}><HiArrowLeft size={30}/></span>
+                        <span className='header__arr' onClick={() => navigate(+1)}><HiArrowRight size={30}/></span>
                     </div>
                     <div className="header__csgo">
                         <img src={CsGo} className='header__csgo-img' alt=""/>
