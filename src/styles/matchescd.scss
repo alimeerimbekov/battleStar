@@ -1,0 +1,28 @@
+.matchescd{
+  &__row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 118px;
+    margin-top: 70px;
+  }
+  &__card{
+    width: calc(33.33333% - 78.66666px);
+    padding: 13px 0;
+    background: rgba(248, 248, 248, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 48px;
+    color: #F8F8F8;
+  }
+  &__desc{
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(248, 248, 248, 0.6);
+
+  }
+
+}

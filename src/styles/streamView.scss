@@ -1,0 +1,42 @@
+.streamView{
+  background: black;
+  padding: 51px 0;
+  margin-left: 70px;
+  &__row{
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+    &-team{
+      display: flex;
+      column-gap: 15px;
+      align-items: center;
+    }
+  }
+  &__team{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    &-title{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: #F8F8F8;
+      display: flex;
+
+    }
+  }
+  &__watch{
+    margin-top: 50px;
+    height: 500px;
+    display: flex;
+    column-gap: 42px;
+    &-img{
+      width: calc(70% - 21px);
+    }
+  }
+  &__chat{
+    width: calc(20% - 21px);
+    height: 500px;
+    background: gray;
+  }
+}

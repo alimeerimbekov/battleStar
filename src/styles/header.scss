@@ -76,6 +76,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    white-space: nowrap;
 
     &-text {
       font-weight: 500;
