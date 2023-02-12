@@ -1,0 +1,148 @@
+.support {
+  background: #040101;
+  padding: 157px 100px;
+
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
+    color: #FFFFFF;
+  }
+
+  &__poisk {
+    display: flex;
+    justify-content: center;
+    margin: 29px 0 161px;
+  }
+
+  &__label {
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+    }
+  }
+  &__search {
+    background: rgba(248, 248, 248, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    width: 543px;
+    padding: 21px 0 21px 64px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 92px;
+    padding: 51px 0 61px;
+  }
+
+  &__link {
+    letter-spacing: 3px;
+    border-bottom: 4px solid #1D1D21;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(248, 248, 248, 0.6);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 3px solid #1D1D21;
+    line-height: 70px;
+    margin: 0 130px;
+
+  }
+
+  &__acc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &-desc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      padding: 0 0 46px 20px;
+    }
+  }
+
+  &__cards {
+    margin-bottom: 132px;
+  }
+
+  &__form {
+      display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &-desc {
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 26px 0 35px;
+    }
+
+    &-block {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      max-width: 769px;
+      width: 100%;
+    }
+
+    &-label {
+      display: flex;
+      flex-direction: row;
+      column-gap: 18px;
+    }
+
+
+    &-input {
+      padding: 15px 0 15px 15px;
+      background: rgba(248, 248, 248, 0.05);
+      border: 1px solid #BFBFBF;
+      backdrop-filter: blur(20px);
+      max-width: 394px;
+      width: 100%;
+    }
+    &-input2 {
+      padding: 15px 0 15px 15px;
+      background: rgba(248, 248, 248, 0.05);
+      border: 1px solid #BFBFBF;
+      backdrop-filter: blur(20px);
+      width: 100%;
+      height: 179px;
+      margin: 20px 0 44px;
+    }
+
+    &-btns {
+      text-align: center;
+    }
+
+    &-btn {
+      background: rgba(248, 248, 248, 0.2);
+      border: 1px solid #F8F8F8;
+      backdrop-filter: blur(40px);
+      padding: 14px 140px;
+    }
+  }
+}
