@@ -1,8 +1,14 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const Aside = () => {
-    const [active,setActive] = useState(1)
+
+    const location = useLocation()
+
+
+
+    const [active,setActive] = useState(0)
+
     return (
         <div className='aside'>
             <div className="aside__column">
@@ -59,8 +65,11 @@ const Aside = () => {
                     </div>
                 </Link>
 
-                <Link to={'/streams'}>
-                    <div onClick={() => setActive(5)} className={`aside__link ${active === 5 ? "active" : ""}`}>
+                {
+                    location.pathname === ('/cabinet') ? ''
+                        :
+                        <Link to={'/streams'}>
+                            <div onClick={() => setActive(5)} className={`aside__link ${active === 5 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -74,9 +83,9 @@ const Aside = () => {
 </svg>
 
                     </span>
-                        <p className="aside__title">КОМАНДЫ</p>
-                    </div>
-                    <div onClick={() => setActive(6)} className={`aside__link ${active === 6 ? "active" : ""}`}>
+                                <p className="aside__title">КОМАНДЫ</p>
+                            </div>
+                            <div onClick={() => setActive(6)} className={`aside__link ${active === 6 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#606060"
                              xmlns="http://www.w3.org/2000/svg">
@@ -84,10 +93,12 @@ const Aside = () => {
     d="M12 12C15.315 12 18 9.315 18 6C18 2.685 15.315 0 12 0C8.685 0 6 2.685 6 6C6 9.315 8.685 12 12 12ZM12 15C7.995 15 0 17.01 0 21V22.5C0 23.325 0.675 24 1.5 24H22.5C23.325 24 24 23.325 24 22.5V21C24 17.01 16.005 15 12 15Z"/>
 </svg>
                     </span>
-                        <p className="aside__title">ДРУЗЬЯ</p>
-                        <span className="aside__link-count">3</span>
-                    </div>
-                </Link>
+                                <p className="aside__title">ДРУЗЬЯ</p>
+                                <span className="aside__link-count">3</span>
+                            </div>
+                        </Link>
+                }
+
 
             </div>
         </div>);

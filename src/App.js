@@ -8,6 +8,7 @@ import Streams from "./pages/Streams/Streams";
 import Lending from "./pages/Lending/Lending";
 import Support from "./pages/Support/Support";
 import StreamView from "./pages/Streams/StreamView/StreamView";
+import Cabinet from "./pages/Cabinet/Cabinet";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path={'/streams'} element={<Streams/>}/>
           <Route path={'/support'} element={<Support/>}/>
           <Route path={'/streamView'} element={<StreamView/>}/>
+          <Route path={'/cabinet'} element={<Cabinet/>}/>
         </Route>
         <Route path={'/lending'} element={<Lending/>}/>
         <Route path={'/register'} element={<Register/>} />
