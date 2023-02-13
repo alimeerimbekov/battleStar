@@ -12,7 +12,7 @@
   &__info {
     width: 30%;
     background: #242426;
-    padding: 35px 48px 17px 34px;
+    padding: 35px 80px 17px 34px;
   }
 
   &__title {
@@ -40,6 +40,15 @@
     row-gap: 7px;
     height: 190px;
     overflow-y: scroll;
+    &::-webkit-scrollbar-thumb{
+      background: orange;
+      border-radius: 2px;
+    }
+    &::-webkit-scrollbar{
+      width: 5px;
+
+
+    }
   }
 
   &__team {
