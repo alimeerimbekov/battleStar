@@ -21,6 +21,16 @@
     display: flex;
     flex-direction: column;
     row-gap: 7px;
+    padding-right: 20px;
+    &::-webkit-scrollbar-thumb{
+      background: orange;
+      border-radius: 2px;
+    }
+    &::-webkit-scrollbar{
+      width: 5px;
+
+
+    }
   }
 
   &__top {
