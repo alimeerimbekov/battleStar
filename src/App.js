@@ -9,6 +9,7 @@ import Lending from "./pages/Lending/Lending";
 import Support from "./pages/Support/Support";
 import StreamView from "./pages/Streams/StreamView/StreamView";
 import Cabinet from "./pages/Cabinet/Cabinet";
+import Teams from "./pages/Teams/Teams";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path={'/support'} element={<Support/>}/>
           <Route path={'/streamView'} element={<StreamView/>}/>
           <Route path={'/cabinet'} element={<Cabinet/>}/>
+          <Route path={'/teams'} element={<Teams/>}/>
         </Route>
         <Route path={'/lending'} element={<Lending/>}/>
         <Route path={'/register'} element={<Register/>} />

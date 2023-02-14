@@ -15,6 +15,12 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 20px;
+  &__teams{
+    max-width: 1220px;
+    margin:  0 auto;
+    padding: 0 20px;
+  }
+
 }
 
 .main {
@@ -25,6 +31,7 @@
   flex-direction: column;
 }
 @import "matchescd";
+@import "teams";
 @import "streamView";
 @import "stream";
 @import "filter";
@@ -51,3 +58,5 @@
 @import "support";
 @import "form";
 @import "cabinet";
+@import "teamsTitle";
+@import "teamsSearch";
