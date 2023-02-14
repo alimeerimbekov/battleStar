@@ -1,0 +1,26 @@
+.teamsTitle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__title{
+    font-weight: 500;
+    font-size: 18px;
+  }
+  &__info{
+    display: flex;
+    column-gap: 5px;
+  }
+  &__desc{
+    font-weight: 500;
+    font-size: 18px;
+    color: #606060;
+  }
+  &__svg{
+    display: flex;
+    align-items: center;
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 18px;
+  }
+}

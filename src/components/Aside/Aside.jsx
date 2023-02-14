@@ -68,7 +68,7 @@ const Aside = () => {
                 {
                     location.pathname === ('/cabinet') ? ''
                         :
-                        <Link to={'/streams'}>
+                        <Link to={'/teams'}>
                             <div onClick={() => setActive(5)} className={`aside__link ${active === 5 ? "active" : ""}`}>
                     <span className="aside__icon">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="#606060"
