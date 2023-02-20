@@ -1,0 +1,126 @@
+.userStore {
+  padding: 29px 84px 54px 59px;
+  display: flex;
+  flex-direction: column;
+  margin: 110px 70px 150px 0;
+  background: rgba(248, 248, 248, 0.05);
+  backdrop-filter: blur(60px);
+  width: calc(70% - 20px);
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 34px;
+
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  &__look {
+    display: flex;
+    flex-direction: row;
+    column-gap: 7px;
+
+    &-text {
+      font-weight: 500;
+      font-size: 18px;
+      color: #606060;
+    }
+  }
+
+  &__select {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+
+    option {
+      background: #3F3F45;
+    }
+  }
+
+  &__store {
+    margin-top: 19px;
+    border-top: 1px solid #3F3F45;
+  }
+
+  &__border {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+  }
+
+  &__database {
+    display: flex;
+    flex-direction: row;
+    column-gap: 23px;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__mode {
+    display: flex;
+    flex-direction: row;
+    column-gap: 9px;
+  }
+
+  &__id {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #989898;
+  }
+
+  &__num {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__status {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+
+    &-win {
+      font-weight: 400;
+      font-size: 16px;
+      color: #6FFF57;
+    }
+
+    &-balance {
+      font-weight: 400;
+      font-size: 16px;
+      color: #FAC704;
+    }
+  }
+
+
+
+
+
+}

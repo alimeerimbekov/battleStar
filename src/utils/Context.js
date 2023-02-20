@@ -8,11 +8,15 @@ export const Context = (props) => {
 
     const [reg, setReg] = useState(false)
 
+    const [stat, setStat] = useState(1)
+
     const value = {
         form,
         setForm,
         reg,
-        setReg
+        setReg,
+        stat,
+        setStat
     }
 
     return <CustomContext.Provider value={value}>

@@ -6,23 +6,23 @@ import {GrFacebookOption} from 'react-icons/gr'
 
 const Form = ({close, setClose, reg, setReg}) => {
 
-    const [active, setActive] = useState(1)
+    const [active, setActive] = useState(0)
+
 
     const regTrue = () => {
-        if (reg === true){
+        if (reg === true) {
             setActive(2)
         }
     }
     setTimeout(regTrue, 1)
 
     const regFalse = () => {
-        if (reg === false){
+        if (reg === false) {
             setActive(1)
         }
     }
     setTimeout(regFalse, 1)
 
-    console.log(reg)
 
     return (
         <form className="form">
@@ -64,10 +64,16 @@ const Form = ({close, setClose, reg, setReg}) => {
 
                 </span>
             <div className="form__top">
-                <div className={`form__border ${active === 1 ? 'active' : ''}`} onClick={() => regFalse()}>
+                <div className={`form__border ${active === 1 ? 'active' : ''}`} onClick={() => {
+                    setActive(1)
+                    regFalse()
+                }}>
                     <h2 className={`form__title ${active === 1 ? 'active' : ''}`}>ВОЙТИ</h2>
                 </div>
-                <div className={`form__border ${active === 2 ? 'active' : ''}`} onClick={() => regTrue()}>
+                <div className={`form__border ${active === 2 ? 'active' : ''}`} onClick={() => {
+                    setActive(2)
+                    regTrue()
+                }}>
                     <h2 className={`form__title ${active === 2 ? 'active' : ''}`}>СОЗДАТЬ АККАУНТ</h2>
                 </div>
             </div>

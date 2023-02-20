@@ -9,7 +9,7 @@ import Lending from "./pages/Lending/Lending";
 import Support from "./pages/Support/Support";
 import StreamView from "./pages/Streams/StreamView/StreamView";
 import Cabinet from "./pages/Cabinet/Cabinet";
-import UserCabinet from "./pages/Partner/UserCabinet";
+import UserCabinet from "./pages/UserCabinet/UserCabinet";
 import Teams from "./pages/Teams/Teams";
 
 function App() {

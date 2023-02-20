@@ -1,0 +1,46 @@
+
+.userAside {
+  position: fixed;
+  top: 0;
+  left: 150px;
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  padding: 109px 0 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+
+    &-text {
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(248, 248, 248, 0.6);
+
+      &.active {
+        color: #FAC704;
+      }
+    }
+
+    &-icon {
+      fill: #3F3F45;
+
+      &.active {
+        svg {
+          fill: #FAC704;
+        }
+      }
+    }
+  }
+}

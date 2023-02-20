@@ -11,20 +11,35 @@
   height: 100vh;
   z-index: 100;
 
+  &__icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
   &__link {
     padding: 15px 8px;
     position: relative;
     margin-top: 20px;
     cursor: pointer;
     transition: .5s;
-    &:hover{
+
+    &:hover {
       transition: .5s;
       background: #FAC704;
+
       .aside__icon {
         svg {
           fill: #101011;
         }
       }
+
       .aside__title {
         color: #101011;
       }
@@ -34,6 +49,7 @@
         color: #F8F8F8;
       }
     }
+
     &-count {
       width: 25px;
       height: 25px;
@@ -51,17 +67,19 @@
       font-size: 16px;
     }
 
-   &:first-child {
-     margin-top: 21px;
-   }
+    &:first-child {
+      margin-top: 0;
+    }
 
     &.active {
       background: #FAC704;
+
       .aside__icon {
         svg {
           fill: #101011;
         }
       }
+
       .aside__title {
         color: #101011;
       }
