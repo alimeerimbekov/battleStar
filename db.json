@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "email": "ali@mail.ru",
+      "password": "$2a$10$TMJnvwbqjwJEcxLg7/iTjOPJppQpDsQWFK0kCs.P2xfqr3RaJ57jS",
+      "login": "Ali",
+      "id": 1
+    },
+    {
+      "email": "Askar@mail.ru",
+      "password": "$2a$10$8yHdttsB45UO41UYHSTDmu6g/qeKW5FbmDsyl.MDYQmQOXJujtJ7u",
+      "login": "Askar",
+      "getDate": "",
+      "id": 2
+    }
+  ]
+}

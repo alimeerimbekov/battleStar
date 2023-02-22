@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {MdContentCopy} from 'react-icons/md';
 import Img from '../../../assets/img/userDataProf.png'
+import {CustomContext} from "../../../utils/Context";
 
 const UserData = () => {
+
+    const {user} = useContext(CustomContext)
+
     return (
         <div className='userData'>
             <div className="userData__top">
@@ -15,13 +19,13 @@ const UserData = () => {
                     <div className="userData__row">
                         <p className="userData__grey">ID</p>
                         <div className="userData__row-num">
-                            <p className="userData__row-id">37589023</p>
+                            <p className="userData__row-id">{user.id}</p>
                             <span className="userData__row-icon"><MdContentCopy/></span>
                         </div>
                     </div>
                     <div className="userData__row">
                         <p className="userData__grey">Никнейм</p>
-                        <p className="userData__row-name">MAX Richter</p>
+                        <p className="userData__row-name">{user.login}</p>
                     </div>
 
                     <div className="userData__row">
@@ -53,7 +57,7 @@ const UserData = () => {
                 <div className="userData__row">
                     <p className="userData__grey">Электронная почта</p>
                     <div className="userData__row-num">
-                        <p className="userData__row-date">Example@mail.com</p>
+                        <p className="userData__row-date">{user.email}</p>
                         <span className="userData__row-icon">
                             <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +80,7 @@ const UserData = () => {
 
                 <div className="userData__row">
                     <p className="userData__grey">Электронная почта</p>
-                    <p className="userData__row-date">Example@mail.com</p>
+                    <p className="userData__row-date">{user.email}</p>
                 </div>
 
                 <div className="userData__row">

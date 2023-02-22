@@ -1,32 +1,17 @@
-import React, {useState} from 'react';
-import {AiFillGithub} from 'react-icons/ai'
-import {ImAppleinc} from 'react-icons/im'
-import {BsGoogle} from 'react-icons/bs'
-import {GrFacebookOption} from 'react-icons/gr'
-
-const Form = ({close, setClose, reg, setReg}) => {
-
-    const [active, setActive] = useState(0)
+import React, {useContext} from 'react';
+import {CustomContext} from "../../utils/Context";
+import FormLogin from "./FormLogin";
+import FormRegister from "./FormRegister";
 
 
-    const regTrue = () => {
-        if (reg === true) {
-            setActive(2)
-        }
-    }
-    setTimeout(regTrue, 1)
 
-    const regFalse = () => {
-        if (reg === false) {
-            setActive(1)
-        }
-    }
-    setTimeout(regFalse, 1)
+const Form = () => {
 
+    const {active, setActive, setClose} = useContext(CustomContext)
 
     return (
-        <form className="form">
-                <span className='form__close' onClick={() => setClose(false)}>
+        <div className='form'>
+            <span className='form__close' onClick={() => setClose(false)}>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
       fill="#F8F8F8"/>
@@ -64,77 +49,23 @@ const Form = ({close, setClose, reg, setReg}) => {
 
                 </span>
             <div className="form__top">
-                <div className={`form__border ${active === 1 ? 'active' : ''}`} onClick={() => {
-                    setActive(1)
-                    regFalse()
-                }}>
-                    <h2 className={`form__title ${active === 1 ? 'active' : ''}`}>ВОЙТИ</h2>
+                <div className={`form__border ${active ? 'active' : ''}`} onClick={() => setActive(true)}>
+                    <h2 className={`form__title ${active ? 'active' : ''}`}>ВОЙТИ</h2>
                 </div>
-                <div className={`form__border ${active === 2 ? 'active' : ''}`} onClick={() => {
-                    setActive(2)
-                    regTrue()
-                }}>
-                    <h2 className={`form__title ${active === 2 ? 'active' : ''}`}>СОЗДАТЬ АККАУНТ</h2>
+                <div className={`form__border ${!active ? 'active' : ''}`} onClick={() => setActive(false)}>
+                    <h2 className={`form__title ${!active ? 'active' : ''}`}>СОЗДАТЬ АККАУНТ</h2>
                 </div>
             </div>
-
             {
-                active === 1 ?
-                    <label className="form__label">
-                        <input type="email" className="form__input" placeholder='Никнейм или электронная почта'/>
-                        <input type="password" className="form__input" placeholder='Пароль'/>
-                    </label>
-                    :
-                    <label className="form__label">
-                        <input type="text" className="form__input" placeholder='Введите никнейм'/>
-                        <input type="email" className="form__input" placeholder='Электронная почта'/>
-                        <input type="password" className="form__input" placeholder='Придумайте пароль'/>
-                    </label>
+                active && <FormLogin/>
+            }
+            {
+                !active && <FormRegister/>
             }
 
-            {
-                active === 1 ?
-                    <div className="form__right">
-                        <p className="form__text">Забыли пароль? <span> Восстановить</span></p>
-                    </div> : ''
-            }
-
-            {
-                active === 1 ?
-                    <div className="form__btns">
-                        <button className="form__btn">Войти</button>
-                    </div>
-                    :
-                    <div className="form__btns">
-                        <button className="form__btn">Создать</button>
-                    </div>
-            }
+        </div>
 
 
-            {
-                active === 1 ?
-                    <div className="form__social">
-                        <div className="form__line"></div>
-                        <p className="form__center">Или войдите через</p>
-                        <div className="form__line"></div>
-                    </div> : ''
-            }
-
-
-            {
-                active === 1 ?
-                    <div className="form__icons">
-                        <span className="form__icon"><AiFillGithub size={30}/></span>
-                        <span className="form__icon"><ImAppleinc size={30}/></span>
-                        <span className="form__icon"><BsGoogle size={30}/></span>
-                        <span className="form__icon"><GrFacebookOption size={30}/></span>
-                    </div> : ''
-            }
-
-            <p className="form__bottom">Создавая аккаунт в “Название” вы соглашаетесь с <span>пользовательским соглашением</span>
-            </p>
-
-        </form>
     );
 };
 

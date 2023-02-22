@@ -1,8 +1,12 @@
-import React from 'react';
+import React,{useContext}from 'react';
 import {FaInstagram, FaFacebookF, FaTwitter, FaYoutube} from 'react-icons/fa';
+import {CustomContext} from "../../../utils/Context";
 
 
 const Footer = () => {
+
+    const {setActive, setClose, close} = useContext(CustomContext)
+
     return (
         <section className='footer'>
             <div className="container">
@@ -50,8 +54,14 @@ const Footer = () => {
                             <li className="footer__link">Как играть</li>
                         </ul>
                         <div className="footer__btns">
-                            <button className="footer__btn">Войти аккаунт</button>
-                            <button className="footer__btn">Создать аккаунт</button>
+                            <button className="footer__btn" type='button' onClick={() => {
+                                setClose(true)
+                                setActive(true)
+                            }}>Войти аккаунт</button>
+                            <button className="footer__btn" type='button' onClick={() => {
+                                setClose(true)
+                                setActive(false)
+                            }}>Создать аккаунт</button>
                             <div className="footer__icons">
                                 <span className="footer__icon"><FaFacebookF size={25}/></span>
                                 <span className="footer__icon"><FaInstagram size={25}/></span>

@@ -11,7 +11,7 @@ import UserBlackList from "../../components/CabinetUser/UserBlackList/UserBlackL
 
 const UserCabinet = () => {
 
-    const {stat, setStat} = useContext(CustomContext)
+    const {stat} = useContext(CustomContext)
 
     return (
         <div className='userCabinet'>

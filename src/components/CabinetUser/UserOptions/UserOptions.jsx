@@ -1,7 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Switch, FormControl, FormLabel, SimpleGrid} from '@chakra-ui/react'
+import {CustomContext} from "../../../utils/Context";
+import {useNavigate} from "react-router-dom";
 
 const UserOptions = () => {
+
+    const {setUser, user} = useContext(CustomContext)
+
+    const navigate = useNavigate()
+
+    const logOutUser = () => {
+        setUser({
+            email: ''
+        })
+        navigate('/lending')
+        localStorage.removeItem('user')
+    }
+
     return (
         <div className='userOpt'>
             <div className="userOpt__content">
@@ -83,7 +98,7 @@ const UserOptions = () => {
 </svg>
 
                                 </span>
-                                <p className="userOpt__steam">VERITA_Luts</p>
+                                <p className="userOpt__steam">{user.login}</p>
                             </div>
                         </div>
                         <div className="userOpt__rowBot">
@@ -98,7 +113,7 @@ const UserOptions = () => {
 </svg>
 
                                 </span>
-                                <p className="userOpt__steam">Example@mail.com</p>
+                                <p className="userOpt__steam">{user.email}</p>
                             </div>
                         </div>
                         <div className="userOpt__rowBot">
@@ -125,7 +140,7 @@ const UserOptions = () => {
     fill="#F13939"/>
 </svg>
                             </span>
-                            <button className="userOpt__btn">Выйти из аккаунта</button>
+                            <button className="userOpt__btn" type='button' onClick={logOutUser}>Выйти из аккаунта</button>
                         </div>
                 </div>
             </div>

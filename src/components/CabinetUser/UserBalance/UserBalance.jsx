@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {FcSimCardChip} from "react-icons/fc";
 import Bal from '../../../assets/img/balnce.png';
 import {BiRightArrowAlt} from 'react-icons/bi';
@@ -8,8 +8,12 @@ import {BsApple} from 'react-icons/bs';
 import {FcGoogle} from 'react-icons/fc';
 import {SiWebmoney} from 'react-icons/si';
 import UserStoreCard from "../UserStore/UserStoreCard";
+import {CustomContext} from "../../../utils/Context";
 
 const UserBalance = () => {
+
+    const {user} = useContext(CustomContext)
+
     return (
         <div className='userBal'>
 
@@ -36,8 +40,8 @@ const UserBalance = () => {
 
                     </span></div>
                     <span><FcSimCardChip size={55}/></span>
-                    <p className="userBal__text">ID 4758 8745</p>
-                    <p className="userBal__text">Max Richter</p>
+                    <p className="userBal__text">ID {user.id}</p>
+                    <p className="userBal__text">{user.login}</p>
                 </div>
                 <div className="userBal__balance">
                     <div className="userBal__follow">

@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import {HiArrowLeft, HiArrowRight} from 'react-icons/hi'
-import {TbChevronDown} from 'react-icons/tb'
 import {AiFillPlusSquare} from 'react-icons/ai'
 import {IoIosSearch, IoIosNotifications} from 'react-icons/io'
 import {MdMessage} from 'react-icons/md'
@@ -9,6 +8,8 @@ import Aside from "../../components/Aside/Aside";
 import {Link, useLocation} from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
 import {CustomContext} from "../../utils/Context";
+import PopoverUser from "../../components/PopoverUser/PopoverUser";
+
 
 const Header = () => {
 
@@ -30,7 +31,6 @@ const Header = () => {
                     <div className="header__csgo">
                         <img src={CsGo} className='header__csgo-img' alt=""/>
                         <p className="header__csgo-name">CS:GO</p>
-                        <span className="header__csgo-arrow"><TbChevronDown size={25}/></span>
                     </div>
                     <Link to={'/support'}>Поддержка</Link>
                     <Link to={'/cabinet'}>Для партнёров</Link>
@@ -68,8 +68,7 @@ const Header = () => {
                                 <span className="header__notification"><IoIosNotifications size={25}/>
                                 <span className='header__notification-count'>4</span></span>
                                 <div className="header__user">
-                                    <p className="header__user-name"> Sergio Richter </p>
-                                    <span><TbChevronDown/></span>
+                                    <PopoverUser/>
                                 </div>
                             </>
                     }

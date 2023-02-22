@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {RiArrowDownSLine} from 'react-icons/ri'
 import Form from "../../../components/Form/Form";
+import {CustomContext} from "../../../utils/Context";
 
 const Head = () => {
 
-    const [close, setClose] = useState(false)
-
-    const [reg, setReg] = useState(false)
+    const {setActive, close, setClose} = useContext(CustomContext)
 
     return (
         <div className='head'>
@@ -16,16 +15,21 @@ const Head = () => {
             <div className="head__btns">
                 <button className="head__btn" type={'button'} onClick={() => {
                     setClose(true)
-                    setReg(false)
-                }}>Войти аккаунт</button>
+                    setActive(true)
+                }}>Войти аккаунт
+                </button>
                 <button className="head__btn" type={'button'} onClick={() => {
                     setClose(true)
-                    setReg(true)
-                }}>Создать аккаунт</button>
-                <p className="head__ru">Ru <RiArrowDownSLine/></p>
+                    setActive(false)
+                }}>Создать аккаунт
+                </button>
+                <select className="head__ru">
+                    <option value="">Ru</option>
+                    <option value="">En</option>
+                </select>
             </div>
             <div className='content' style={{display: close ? 'block' : 'none'}}>
-                <Form close={close} setClose={setClose} reg={reg} setReg={setReg}/>
+                <Form close={close} setClose={setClose}/>
             </div>
         </div>
     );

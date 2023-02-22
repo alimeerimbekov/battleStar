@@ -1,6 +1,5 @@
 import React from 'react';
 import LenSlideCard from "../../../components/LenSlideCard/LenSlideCard";
-import {GoChevronLeft, GoChevronRight} from "react-icons/go"
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
