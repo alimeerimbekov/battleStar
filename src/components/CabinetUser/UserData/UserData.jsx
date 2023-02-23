@@ -39,7 +39,7 @@ const UserData = () => {
 
                     <div className="userData__row">
                         <p className="userData__grey">Дата регистрации</p>
-                        <p className="userData__row-date">16.05.2021</p>
+                        <p className="userData__row-date">{user.date.slice(0, 10)}</p>
                     </div>
                 </div>
                 <div className="userData__image">

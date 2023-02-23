@@ -12,6 +12,27 @@
       "login": "Askar",
       "getDate": "",
       "id": 2
+    },
+    {
+      "email": "ali.kg@mail.ru",
+      "password": "$2a$10$X3hPlrdtNdWV0aIiOQmrTugTkek5ChGR5f3lf/HgPUrTwGpod3JAS",
+      "login": " Kg <Ali/>",
+      "getDate": "",
+      "id": 3
+    },
+    {
+      "email": "asss@mail.ru",
+      "password": "$2a$10$NrKoX6jaxOxno0B9rKLI7uDUQ7XypaBNM3Fug0T3NYJINJRfCCY7C",
+      "login": "Asss",
+      "date": "2023-02-23T07:05:41.388Z",
+      "id": 4
+    },
+    {
+      "email": "asas111@mail.ru",
+      "password": "$2a$10$vkZvZkO3PGkPWbfAm0MnXORPdqyCHhIjIUzt78aApeYF9m8Ji0DRi",
+      "login": "asas",
+      "date": "2023-02-23T07:17:59.656Z",
+      "id": 5
     }
   ]
 }

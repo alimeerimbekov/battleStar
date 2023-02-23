@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Begin from "./Begin/Begin";
 import LenSlide from "./LenSlide/LenSlide";
 import CSGO from "./CSGO/CSGO";
@@ -10,8 +10,18 @@ import BtnReg from "./BtnReg/BtnReg";
 import Stat from "./Stat/Stat";
 import Star from "./Star/Star";
 import Footer from "./Footer/Footer";
+import {CustomContext} from "../../utils/Context";
+import {Navigate} from "react-router-dom";
+
 
 const Lending = () => {
+
+    const {user} = useContext(CustomContext)
+
+    if (user.email.length !== 0) {
+        return <Navigate to={'/'}/>
+    }
+
     return (
         <>
             <Begin/>

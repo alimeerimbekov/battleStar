@@ -12,7 +12,7 @@ const Aside = () => {
     return (
         <div className='aside'>
             <div className="aside__column">
-                <Link to={'/'} className="header__logo aside__link">
+                <Link to={'/'} className="header__logo aside__link" style={{hover: 'none !important'}}>
                     <svg width="65" height="69" viewBox="0 0 65 69" fill="#FAC704"
                          xmlns="http://www.w3.org/2000/svg">
 <path

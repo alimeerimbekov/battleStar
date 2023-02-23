@@ -23,11 +23,13 @@ const FormRegister = () => {
     const registerUser = (e) => {
         e.preventDefault()
 
+        let date = new Date()
+
         let newUser = {
             login: e.target[0].value,
             email: e.target[1].value,
             password: e.target[2].value,
-            getDate: ''
+            date: date
         }
 
         axios.post('/register', newUser)
